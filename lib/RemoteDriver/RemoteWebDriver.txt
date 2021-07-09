@@ -1,0 +1,19 @@
+Information for remote webdriver:
+
+1- To run the hub:
+	java -jar selenium-server-standalone-3.141.59.jar -role hub
+2- To connect a node to the hub:
+	java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:4444/grid/register -port 1414
+	
+3- Creation on code:
+
+	DesiredCapabilities cap = new DesiredCapabilities();
+	cap.setBrowserName(BrowserType.EDGE);
+	cap.setPlatform(Platform.WINDOWS);
+
+	driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), cap);
+
+
+Other:
+Grid console url: http://127.0.0.1:4444/grid/console
+For steps 2 and 3 run the file runRemoteDriver.bat

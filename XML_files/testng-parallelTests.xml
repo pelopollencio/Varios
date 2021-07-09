@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel tests suite" parallel="tests"
+	thread-count="5">
+
+	<test name="Test Amazon chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="selenium.test.amazon.Test_amazon" />
+		</classes>
+	</test>
+
+	<test name="Test Telefonica firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="selenium.test.telefonica.Test_telefonica" />
+		</classes>
+	</test>
+
+	<test name="Test Dezlearn edge">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="selenium.test.dezlearn.Test_dezlearn" />
+		</classes>
+	</test>
+
+	<test name="Test Youtube android">
+		<classes>
+			<class name="android.test.youtube.Test_youtube" />
+		</classes>
+	</test>
+
+</suite> 

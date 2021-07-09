@@ -1,0 +1,2 @@
+start cmd.exe /K java -jar selenium-server-standalone-3.141.59.jar -role hub
+start cmd.exe /K java -Dwebdriver.edge.driver="C:\QA-Tools\webdrivers\msedgedriver.exe" -Dwebdriver.gecko.driver="C:\QA-Tools\webdrivers\geckodriver.exe" -Dwebdriver.chrome.driver="C:\QA-Tools\webdrivers\chromedriver.exe" -Dwebdriver.ie.driver="C:\QA-Tools\webdrivers\IEDriverServer.exe" -jar selenium-server-standalone-3.141.59.jar -role node -nodeConfig "configNode.json" -hub http://127.0.0.1:4444/grid/register
